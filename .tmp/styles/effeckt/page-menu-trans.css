@@ -1,0 +1,1069 @@
+/**
+ * ng-page-menu-transtion.scss 0.1
+ * http://github.wonglok.com/YH
+ *
+ * Rewritten for effeckts project
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2014, Wonglok
+ * http://www.yellowhappy.com
+ */
+
+/* ============================================
+Page Structure
+   ============================================ */
+
+/* line 20, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+html,
+body,
+[ng-app],
+.lok-container,
+.lok-view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 30, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 35, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+
+/* line 45, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-lock-scroll.lok-container {
+  overflow: hidden;
+}
+
+/* line 48, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-lock-scroll .lok-view {
+  overflow: hidden;
+}
+
+/* line 55, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-open-menu.lok-container {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* line 60, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-open-menu .lok-view {
+  overflow: hidden;
+}
+
+/* line 64, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-open-menu .lok-view::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(133, 133, 133, 0.15);
+  position: absolute;
+  display: none;
+}
+
+/* line 79, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.desktop:not(.gt-ie-8) .lok-view::after {
+  display: block;
+}
+
+/* ============================================
+Page 3D Effeckt - zoom (best for android)
+   ============================================ */
+
+/* line 99, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  /* ============================================
+  3D page transition upon open and close menu
+  ============================================ */
+  /* ============================================
+  3D page transition in and out of the app when 3D menu is opened.
+  ============================================ */
+}
+
+/* line 102, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom .lok-view {
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* line 139, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom:not(.lok-open-menu) .lok-view {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.2s;
+}
+
+/* line 147, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 1s 0.2s;
+}
+
+/* line 159, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-zoom.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  transition: all 0.5s 0.1s;
+}
+
+/* line 165, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom.lok-open-menu .lok-view.ng-enter,
+.lok-3d-page-zoom.lok-open-menu .lok-view.ng-enter.ng-enter-active {
+  transition: all 0.5s 0.6s;
+}
+
+/* line 171, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom.lok-open-menu .lok-view.ng-enter {
+  -webkit-transform: rotateY(-30deg) scale(0.7);
+  transform: rotateY(-30deg) scale(0.7);
+  opacity: 0;
+}
+
+/* line 174, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-zoom.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-zoom.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+}
+
+/* line 181, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-zoom.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  -webkit-transform: rotateY(-30deg) scale(1.3);
+  transform: rotateY(-30deg) scale(1.3);
+  opacity: 0;
+}
+
+/* ============================================
+Page 3D Effeckt - flip (best for ios/desktop)
+   ============================================ */
+
+/* line 193, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  /* ============================================
+  3D page transition upon open and close menu
+  ============================================ */
+  /* ============================================
+  3D page transition in and out of the app when 3D menu is opened.
+  ============================================ */
+}
+
+/* line 196, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip .lok-view {
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* line 235, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip:not(.lok-open-menu) .lok-view {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.2s;
+}
+
+/* line 243, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 1s 0.2s;
+}
+
+/* line 255, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-flip.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  transition: all 0.5s 0.1s;
+}
+
+/* line 261, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip.lok-open-menu .lok-view.ng-enter,
+.lok-3d-page-flip.lok-open-menu .lok-view.ng-enter.ng-enter-active {
+  transition: all 0.5s 0.6s;
+}
+
+/* line 267, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip.lok-open-menu .lok-view.ng-enter {
+  -webkit-transform: translateY(-50%) rotateY(-30deg) rotateX(15deg);
+  transform: translateY(-50%) rotateY(-30deg) rotateX(15deg);
+  opacity: 0;
+}
+
+/* line 270, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-flip.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-flip.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+}
+
+/* line 277, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-flip.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  -webkit-transform: translateY(50%) rotateY(-30deg) rotateX(-15deg);
+  transform: translateY(50%) rotateY(-30deg) rotateX(-15deg);
+  opacity: 0;
+}
+
+/* line 289, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  /* ============================================
+  3D page transition upon open and close menu
+  ============================================ */
+  /* ============================================
+  3D page transition in and out of the app when 3D menu is opened.
+  ============================================ */
+}
+
+/* line 292, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize .lok-view {
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* line 330, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize:not(.lok-open-menu) .lok-view {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.2s;
+}
+
+/* line 338, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 1s 0.2s;
+}
+
+/* line 350, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-minimize.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  transition: all 0.5s 0.1s;
+}
+
+/* line 356, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize.lok-open-menu .lok-view.ng-enter,
+.lok-3d-page-minimize.lok-open-menu .lok-view.ng-enter.ng-enter-active {
+  transition: all 0.5s 0.6s;
+}
+
+/* line 362, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize.lok-open-menu .lok-view.ng-enter {
+  -webkit-transform: scale(2.1) rotateY(-30deg);
+  transform: scale(2.1) rotateY(-30deg);
+  opacity: 0;
+}
+
+/* line 365, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-minimize.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-minimize.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+}
+
+/* line 372, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-minimize.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  -webkit-transform: scale(0.1) rotateY(-30deg);
+  transform: scale(0.1) rotateY(-30deg);
+  opacity: 0;
+}
+
+/* line 381, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  /* ============================================
+  3D page transition upon open and close menu
+  ============================================ */
+  /* ============================================
+  3D page transition in and out of the app when 3D menu is opened.
+  ============================================ */
+}
+
+/* line 384, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate .lok-view {
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* line 421, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate:not(.lok-open-menu) .lok-view {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.2s;
+}
+
+/* line 429, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 1s 0.2s;
+}
+
+/* line 441, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-migrate.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  transition: all 0.5s 0.1s;
+}
+
+/* line 447, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate.lok-open-menu .lok-view.ng-enter,
+.lok-3d-page-migrate.lok-open-menu .lok-view.ng-enter.ng-enter-active {
+  transition: all 0.5s 0.6s;
+}
+
+/* line 453, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate.lok-open-menu .lok-view.ng-enter {
+  -webkit-transform: rotateY(-30deg) translateX(-30.5%);
+  transform: rotateY(-30deg) translateX(-30.5%);
+  opacity: 0;
+}
+
+/* line 456, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-migrate.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-migrate.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+}
+
+/* line 463, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-migrate.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  -webkit-transform: rotateY(-30deg) translateX(30.5%);
+  transform: rotateY(-30deg) translateX(30.5%);
+  opacity: 0;
+}
+
+/* line 472, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  /* ============================================
+  3D page transition upon open and close menu
+  ============================================ */
+  /* ============================================
+  3D page transition in and out of the app when 3D menu is opened.
+  ============================================ */
+}
+
+/* line 475, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide .lok-view {
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* line 512, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide:not(.lok-open-menu) .lok-view {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.2s;
+}
+
+/* line 520, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 1s 0.2s;
+}
+
+/* line 532, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-slide.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  transition: all 0.5s 0.1s;
+}
+
+/* line 538, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide.lok-open-menu .lok-view.ng-enter,
+.lok-3d-page-slide.lok-open-menu .lok-view.ng-enter.ng-enter-active {
+  transition: all 0.5s 0.6s;
+}
+
+/* line 544, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide.lok-open-menu .lok-view.ng-enter {
+  -webkit-transform: rotateY(-30deg) translateY(40.5%);
+  transform: rotateY(-30deg) translateY(40.5%);
+  opacity: 0;
+}
+
+/* line 547, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-slide.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-slide.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+}
+
+/* line 554, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-slide.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  -webkit-transform: rotateY(-30deg) translateY(-40.5%);
+  transform: rotateY(-30deg) translateY(-40.5%);
+  opacity: 0;
+}
+
+/* line 563, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  /* ============================================
+  3D page transition upon open and close menu
+  ============================================ */
+  /* ============================================
+  3D page transition in and out of the app when 3D menu is opened.
+  ============================================ */
+}
+
+/* line 566, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move .lok-view {
+  -webkit-transform-origin: 70% 50%;
+  transform-origin: 70% 50%;
+}
+
+/* line 606, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move:not(.lok-open-menu) .lok-view {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.2s;
+}
+
+/* line 614, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move.lok-open-menu .lok-view {
+  -webkit-transform: translateZ(0.1px) scale(0.5) rotateX(30deg);
+  transform: translateZ(0.1px) scale(0.5) rotateX(30deg);
+  opacity: 0.5;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 1s 0.2s;
+}
+
+/* line 626, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-card-move.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  transition: all 0.6s 0.1s;
+}
+
+/* line 632, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move.lok-open-menu .lok-view.ng-enter,
+.lok-3d-page-card-move.lok-open-menu .lok-view.ng-enter.ng-enter-active {
+  transition: all 1s 0.6s;
+}
+
+/* line 638, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move.lok-open-menu .lok-view.ng-enter {
+  -webkit-transform: translateY(-20%) translateZ(0.1px) scale(0.5) rotateX(40deg) translateY(-60%);
+  transform: translateY(-20%) translateZ(0.1px) scale(0.5) rotateX(40deg) translateY(-60%);
+  opacity: 0;
+}
+
+/* line 641, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-card-move.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-card-move.lok-open-menu .lok-view {
+  -webkit-transform: translateZ(0.1px) scale(0.5) rotateX(30deg);
+  transform: translateZ(0.1px) scale(0.5) rotateX(30deg);
+  opacity: 0.5;
+}
+
+/* line 648, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-move.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  -webkit-transform: translateY(10%) translateZ(0.1px) scale(0.5) rotateX(40deg) translateY(60%);
+  transform: translateY(10%) translateZ(0.1px) scale(0.5) rotateX(40deg) translateY(60%);
+  opacity: 0;
+}
+
+/* line 659, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+  /* ============================================
+  3D page transition upon open and close menu
+  ============================================ */
+  /* ============================================
+  3D page transition in and out of the app when 3D menu is opened.
+  ============================================ */
+}
+
+/* line 662, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall .lok-view {
+  -webkit-transform-origin: 70% 70%;
+  transform-origin: 70% 70%;
+}
+
+/* line 702, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall:not(.lok-open-menu) .lok-view {
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.2s;
+}
+
+/* line 710, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall.lok-open-menu .lok-view {
+  -webkit-transform: translateY(5%) translateZ(0.01px) scale(0.5) rotateX(60deg) rotateZ(35deg);
+  transform: translateY(5%) translateZ(0.01px) scale(0.5) rotateX(60deg) rotateZ(35deg);
+  opacity: 0.5;
+  transition: all cubic-bezier(0.09, 0.68, 0, 0.99) 1s 0.2s;
+}
+
+/* line 722, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-card-fall.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  transition: all 0.6s 0.1s;
+}
+
+/* line 728, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall.lok-open-menu .lok-view.ng-enter,
+.lok-3d-page-card-fall.lok-open-menu .lok-view.ng-enter.ng-enter-active {
+  transition: all 1s 0.6s;
+}
+
+/* line 734, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall.lok-open-menu .lok-view.ng-enter {
+  -webkit-transform: translateY(-50%) translateZ(0.01px) scale(1) rotateX(60deg) rotateZ(35deg);
+  transform: translateY(-50%) translateZ(0.01px) scale(1) rotateX(60deg) rotateZ(35deg);
+  opacity: 0;
+}
+
+/* line 737, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-card-fall.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-card-fall.lok-open-menu .lok-view {
+  -webkit-transform: translateY(5%) translateZ(0.01px) scale(0.5) rotateX(60deg) rotateZ(35deg);
+  transform: translateY(5%) translateZ(0.01px) scale(0.5) rotateX(60deg) rotateZ(35deg);
+  opacity: 0.5;
+}
+
+/* line 744, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-3d-page-card-fall.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  -webkit-transform: translateY(60%) translateZ(0.01px) scale(0.2) rotateX(60deg) rotateZ(35deg);
+  transform: translateY(60%) translateZ(0.01px) scale(0.2) rotateX(60deg) rotateZ(35deg);
+  opacity: 0;
+}
+
+/* line 757, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-fade {
+  /* ============================================
+  2D page transition when menu is closed
+  ============================================ */
+}
+
+/* line 764, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view.ng-leave,
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view.ng-leave.ng-leave-active {
+  transition: opacity 0s, -webkit-transform 0s;
+  transition: opacity 0s, transform 0s;
+}
+
+/* line 769, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view.ng-enter,
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view.ng-enter.ng-enter-active {
+  transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+  transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+}
+
+/* line 774, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view.ng-enter {
+  opacity: 0;
+}
+
+/* line 778, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view.ng-enter.ng-enter-active,
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+
+/* line 784, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view.ng-leave,
+.lok-2d-page-fade:not(.lok-open-menu) .lok-view.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* line 792, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-preview-move {
+  /* ============================================
+  2D page transition when menu is closed
+  ============================================ */
+}
+
+/* line 799, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view.ng-leave,
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view.ng-leave.ng-leave-active {
+  transition: opacity 0s, -webkit-transform 0s;
+  transition: opacity 0s, transform 0s;
+}
+
+/* line 805, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view.ng-enter,
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view.ng-enter.ng-enter-active {
+  transition: opacity 1s 0.3s, -webkit-transform 1s 0.3s;
+  transition: opacity 1s 0.3s, transform 1s 0.3s;
+}
+
+/* line 810, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view.ng-enter {
+  -webkit-transform: translate3d(0, -150%, 0);
+  transform: translate3d(0, -150%, 0);
+  opacity: 0;
+}
+
+/* line 814, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view.ng-enter.ng-enter-active,
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view.ng-leave,
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+
+/* line 820, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-preview-move:not(.lok-open-menu) .lok-view.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* line 827, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-zoom {
+  /* ============================================
+  2D page transition when menu is closed
+  ============================================ */
+}
+
+/* line 834, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view.ng-leave,
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view.ng-leave.ng-leave-active {
+  transition: opacity 0.2s 0.1s, -webkit-transform cubic-bezier(0.09, 0.68, 0, 0.99) 0.2s 0.1s;
+  transition: opacity 0.2s 0.1s, transform cubic-bezier(0.09, 0.68, 0, 0.99) 0.2s 0.1s;
+}
+
+/* line 839, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view.ng-enter,
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view.ng-enter.ng-enter-active {
+  transition: opacity 0.75s 0.1s, -webkit-transform cubic-bezier(0.09, 0.68, 0, 0.99) 0.75s 0.1s;
+  transition: opacity 0.75s 0.1s, transform cubic-bezier(0.09, 0.68, 0, 0.99) 0.75s 0.1s;
+}
+
+/* line 844, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view.ng-enter {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0;
+}
+
+/* line 850, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view.ng-enter.ng-enter-active,
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+
+/* line 856, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view.ng-leave,
+.lok-2d-page-zoom:not(.lok-open-menu) .lok-view.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* ============================================
+    stagerring effect
+    list item slide in one by one :)
+   ============================================ */
+
+/* line 871, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container.lok-open-menu .lok-nav h2 {
+  transition-delay: 1.25s;
+}
+
+/* line 875, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container.lok-open-menu .lok-nav li:nth-child(1) {
+  transition-delay: 1.35s;
+}
+
+/* line 875, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container.lok-open-menu .lok-nav li:nth-child(2) {
+  transition-delay: 1.45s;
+}
+
+/* line 875, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container.lok-open-menu .lok-nav li:nth-child(3) {
+  transition-delay: 1.55s;
+}
+
+/* line 875, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container.lok-open-menu .lok-nav li:nth-child(4) {
+  transition-delay: 1.65s;
+}
+
+/* line 875, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container.lok-open-menu .lok-nav li:nth-child(5) {
+  transition-delay: 1.75s;
+}
+
+/* ============================================
+Nav Menu
+============================================ */
+
+/* line 888, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container .lok-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 400;
+  width: 240px;
+  height: 100%;
+  -webkit-perspective: 400px;
+  perspective: 400px;
+}
+
+/* line 903, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container:not(.lok-open-menu) .lok-nav {
+  transition: opacity 0.5s, -webkit-transform 0s 0.5s;
+  transition: opacity 0.5s, transform 0s 0.5s;
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+}
+
+/* line 912, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-container.lok-open-menu .lok-nav {
+  transition: opacity 0.5s 0.75s;
+  opacity: 0.85;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* ============================================
+Menu Fade In
+============================================ */
+
+/* line 931, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-fade .lok-nav h2,
+.lok-menu-1by1-fade .lok-nav ul li {
+  will-change: transform, opacity;
+}
+
+/* line 939, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-fade:not(.lok-open-menu) .lok-nav h2,
+.lok-menu-1by1-fade:not(.lok-open-menu) .lok-nav ul li {
+  transition: -webkit-transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s;
+  -webkit-transform: translate3d(-50px, 0, 0);
+  transform: translate3d(-50px, 0, 0);
+  opacity: 0;
+}
+
+/* line 951, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-fade.lok-open-menu .lok-nav h2,
+.lok-menu-1by1-fade.lok-open-menu .lok-nav ul li {
+  transition: -webkit-transform 0.5s, opacity  1s;
+  transition: transform 0.5s, opacity  1s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+/* ============================================
+Menu Flip In
+============================================ */
+
+/* line 969, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-flip .lok-nav {
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+/* line 974, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-flip .lok-nav h2,
+.lok-menu-1by1-flip .lok-nav ul li {
+  will-change: transform, opacity;
+}
+
+/* line 983, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-flip:not(.lok-open-menu) .lok-nav h2,
+.lok-menu-1by1-flip:not(.lok-open-menu) .lok-nav ul li {
+  transition: -webkit-transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s;
+  -webkit-transform: rotateY(19deg) rotateX(100deg) translate3d(-50px, 0, 0);
+  transform: rotateY(19deg) rotateX(100deg) translate3d(-50px, 0, 0);
+  opacity: 0;
+}
+
+/* line 995, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-flip.lok-open-menu .lok-nav h2,
+.lok-menu-1by1-flip.lok-open-menu .lok-nav ul li {
+  transition: -webkit-transform 0.5s, opacity  1s;
+  transition: transform 0.5s, opacity  1s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+/* ============================================
+Menu Dive In
+============================================ */
+
+/* line 1012, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-dive-in .lok-nav {
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+/* line 1017, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-dive-in .lok-nav h2,
+.lok-menu-1by1-dive-in .lok-nav ul li {
+  will-change: transform, opacity;
+}
+
+/* line 1026, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-dive-in:not(.lok-open-menu) .lok-nav h2,
+.lok-menu-1by1-dive-in:not(.lok-open-menu) .lok-nav ul li {
+  transition: -webkit-transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s;
+  -webkit-transform: rotateX(30deg) translate3d(0, 10vh, 0);
+  transform: rotateX(30deg) translate3d(0, 10vh, 0);
+  opacity: 0;
+}
+
+/* line 1038, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-dive-in.lok-open-menu .lok-nav h2,
+.lok-menu-1by1-dive-in.lok-open-menu .lok-nav ul li {
+  transition: -webkit-transform 0.5s, opacity  1s;
+  transition: transform 0.5s, opacity  1s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+/* ============================================
+Menu Scale
+============================================ */
+
+/* line 1053, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-scale .lok-nav {
+  -webkit-perspective: 300px;
+  perspective: 300px;
+}
+
+/* line 1058, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-scale .lok-nav h2,
+.lok-menu-1by1-scale .lok-nav ul li {
+  will-change: transform, opacity;
+}
+
+/* line 1067, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-scale:not(.lok-open-menu) .lok-nav h2,
+.lok-menu-1by1-scale:not(.lok-open-menu) .lok-nav ul li {
+  transition: -webkit-transform 0s, opacity 0s;
+  transition: transform 0s, opacity 0s;
+  -webkit-transform: scale(0) translate3d(0, 0, 0);
+  transform: scale(0) translate3d(0, 0, 0);
+  opacity: 0;
+}
+
+/* line 1079, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-1by1-scale.lok-open-menu .lok-nav h2,
+.lok-menu-1by1-scale.lok-open-menu .lok-nav ul li {
+  transition: -webkit-transform 0.5s, opacity  1s;
+  transition: transform 0.5s, opacity  1s;
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+  transform: scale(1) translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+/* ============================================
+Button Fade in out
+   ============================================ */
+
+/* line 1095, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-btn {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 500;
+  will-change: opacity, transform;
+  transition: opacity 1s 0.15s, -webkit-transform 1s 0.15s;
+  transition: opacity 1s 0.15s, transform 1s 0.15s;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 1107, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lok-menu-btn.lok-open-menu {
+  transition: opacity 0.3s, -webkit-transform 1s 0s;
+  transition: opacity 0.3s, transform 1s 0s;
+  opacity: 0;
+  -webkit-transform: translate3d(0, -200px, 0);
+  transform: translate3d(0, -200px, 0);
+}
+
+/* ============================================
+IE8 Fix
+   ============================================ */
+
+/* line 1124, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.lt-ie9 .container {
+  width: 960px;
+}
+
+/* line 1129, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.no-csstransforms .lok-nav {
+  left: -240px;
+}
+
+/* line 1133, ../../../app/styles/effeckt/page-menu-trans.scss */
+
+.no-csstransforms .lok-open-menu .lok-nav {
+  left: 0px;
+}

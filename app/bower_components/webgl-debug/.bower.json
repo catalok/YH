@@ -1,0 +1,14 @@
+{
+  "name": "webgl-debug",
+  "_cacheHeaders": {
+    "ETag": "\"d13bec855870e858b8f8963ae88a0ce8\"",
+    "Content-Length": "25738",
+    "Content-Type": "text/plain; charset=utf-8",
+    "Content-Disposition": "inline"
+  },
+  "_release": "e-tag:d13bec855",
+  "main": "index.js",
+  "_source": "https://raw.github.com/tparisi/WebGLBook/master/Chapter%207/webgl-debug.js",
+  "_target": "*",
+  "_originalSource": "https://raw.github.com/tparisi/WebGLBook/master/Chapter%207/webgl-debug.js"
+}

@@ -1,0 +1,728 @@
+/* ============================================
+	Page Structure
+   ============================================ */
+
+/**,
+
+*:after,
+*::before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*/
+
+/* ============================================
+Structure
+   ============================================ */
+
+/* line 18, ../../app/styles/backup.scss */
+
+.browsehappy {
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+  height: 30px;
+}
+
+/* line 33, ../../app/styles/backup.scss */
+
+html.lt-ie9 body {
+  margin-top: 30px;
+}
+
+/* line 39, ../../app/styles/backup.scss */
+
+html,
+body,
+.lok-container,
+.lok-view {
+  height: 100%;
+  position: relative;
+}
+
+/* line 49, ../../app/styles/backup.scss */
+
+.lok-view {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+/* line 55, ../../app/styles/backup.scss */
+
+.lok-view {
+  z-index: 100;
+}
+
+/* line 59, ../../app/styles/backup.scss */
+
+.lok-lock-scroll.lok-container {
+  overflow: hidden;
+}
+
+/* line 63, ../../app/styles/backup.scss */
+
+.lok-lock-scroll.lok-container .lok-view {
+  overflow: hidden;
+}
+
+/* line 74, ../../app/styles/backup.scss */
+
+html.desktop {
+  overflow-y: scroll;
+}
+
+/* ============================================
+Page3D flip
+   ============================================ */
+
+/* line 82, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container {
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+}
+
+/* line 89, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container .lok-view {
+  will-change: none;
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* ============================================
+Timing - Close 3D
+   ============================================ */
+
+/* line 103, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container:not(.lok-open-menu) .lok-view.ng-enter.ng-enter-active {
+  transition: all 0.5s 0.1s;
+}
+
+/* line 110, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container:not(.lok-open-menu) .lok-view {
+  transition: transform cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.5s, opacity 0.5s;
+}
+
+/* ============================================
+Timing - Open 3D
+   ============================================ */
+
+/* line 121, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view {
+  transition: transform cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s 0.2s, opacity 0.5s;
+}
+
+/* ============================================
+Timing - Card Close
+   ============================================ */
+
+/* line 132, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-leave.ng-leave-active,
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-leave {
+  transition: all 0.5s 0.1s;
+}
+
+/* ============================================
+Timing - Card Open
+   ============================================ */
+
+/* line 144, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-enter {
+  transition: all 0.75s 0.5s;
+}
+
+/* ============================================
+	Start Card Open
+	============================================ */
+
+/* line 158, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-enter {
+  -webkit-transform: rotateY(-30deg) scale(0.7);
+  transform: rotateY(-30deg) scale(0.7);
+  opacity: 0;
+}
+
+/* ============================================
+Finish Card Open
+   ============================================ */
+
+/* ============================================
+Start Card Close
+   ============================================ */
+
+/* ============================================
+3d Menu Opened (3D State)
+   ============================================ */
+
+/* line 177, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-leave,
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view {
+  -webkit-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  opacity: 0.5;
+}
+
+/* line 190, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+  -webkit-transform: rotateY(-30deg) scale(1.3);
+  transform: rotateY(-30deg) scale(1.3);
+  opacity: 0;
+}
+
+/* ============================================
+Desktop Close / Open Page
+   ============================================ */
+
+@media screen and (min-width: 961px) {
+  /* line 205, ../../app/styles/backup.scss */
+
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-enter {
+    -webkit-transform: translateY(-50%) rotateY(-30deg) rotateX(15deg);
+    transform: translateY(-50%) rotateY(-30deg) rotateX(15deg);
+    opacity: 0;
+  }
+
+  /* line 214, ../../app/styles/backup.scss */
+
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-leave,
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view {
+    -webkit-transform: rotateY(-30deg);
+    transform: rotateY(-30deg);
+    opacity: 0.5;
+  }
+
+  /* line 226, ../../app/styles/backup.scss */
+
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+    -webkit-transform: translateY(50%) rotateY(-30deg) rotateX(-15deg);
+    transform: translateY(50%) rotateY(-30deg) rotateX(-15deg);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  /* line 237, ../../app/styles/backup.scss */
+
+  .lok-3d-page-flip.lok-container:not(.lok-open-menu) .lok-view,
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view {
+    transition: all 0.5s 0.2s;
+  }
+
+  /* line 246, ../../app/styles/backup.scss */
+
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-enter {
+    -webkit-transform: translateX(-108px) rotateY(-30deg);
+    transform: translateX(-108px) rotateY(-30deg);
+    opacity: 0;
+  }
+
+  /* line 255, ../../app/styles/backup.scss */
+
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-enter.ng-enter-active,
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-leave,
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view {
+    -webkit-transform: translateX(-100px) rotateY(-30deg);
+    transform: translateX(-100px) rotateY(-30deg);
+    opacity: 0.5;
+  }
+
+  /* line 265, ../../app/styles/backup.scss */
+
+  .lok-3d-page-flip.lok-container.lok-open-menu .lok-view.ng-leave.ng-leave-active {
+    -webkit-transform: translateX(-92px) rotateY(-30deg);
+    transform: translateX(-92px) rotateY(-30deg);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+Page in 2D Scene and Trasnforms (For fixing iOS 7 Swipe)
+:not() is for stopping the css inheritance for easier code organizing;
+   ============================================ */
+
+/* line 281, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container:not(.lok-open-menu) .lok-view {
+  opacity: 1;
+}
+
+/* line 285, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container:not(.lok-open-menu) .lok-view.ng-leave {
+  will-change: opacity;
+  opacity: 1;
+}
+
+/* line 289, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container:not(.lok-open-menu) .lok-view.ng-leave.ng-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s 0.2s;
+}
+
+/* line 300, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container:not(.lok-open-menu) .lok-view.ng-enter {
+  will-change: opacity;
+  opacity: 0;
+}
+
+/* line 304, ../../app/styles/backup.scss */
+
+.lok-3d-page-flip.lok-container:not(.lok-open-menu) .lok-view.ng-enter.ng-enter-active {
+  opacity: 1;
+  transition: opacity 1s 0.7s;
+}
+
+/* ============================================
+Menu Button
+   ============================================ */
+
+/* line 318, ../../app/styles/backup.scss */
+
+.lok-nav-trigger {
+  position: fixed;
+  z-index: 250;
+  top: 0;
+  left: -240px;
+  width: 244px;
+  color: yellow;
+  height: 100%;
+  background-color: rgba(255, 200, 0, 0.8) !important;
+  background-color: #FFCC00;
+  border: 0;
+  margin: 0px 0px;
+  cursor: pointer;
+  will-change: transform,opacity;
+  opacity: 0;
+  transition: transform cubic-bezier(0.09, 0.68, 0, 0.99) 0.5s, opacity 0.5s 0.75s;
+  box-shadow: 0 0 10px 0 #ccc;
+}
+
+/* line 354, ../../app/styles/backup.scss */
+
+.lok-nav-trigger:hover,
+.lok-nav-trigger.open {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: alpha(opacity=85);
+  -moz-opacity: 0.85;
+  -khtml-opacity: 0.85;
+  opacity: 0.85;
+  -webkit-transform: translateX(240px);
+  transform: translateX(240px);
+  /*
+  	-webkit-animation-timing-function: cubic-bezier(0.09, 0.68, 0, 0.99);
+  	-moz-animation-timing-function: cubic-bezier(0.09, 0.68, 0, 0.99);
+  	-o-animation-timing-function: cubic-bezier(0.09, 0.68, 0, 0.99);
+  	animation-timing-function: cubic-bezier(0.09, 0.68, 0, 0.99);
+  */
+  -webkit-animation-name: trigger-flash;
+  animation-name: trigger-flash;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/* line 386, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav-trigger:hover {
+  display: block;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0.0;
+  -khtml-opacity: 0.0;
+  opacity: 0.0;
+}
+
+/* prevents fouc */
+
+/* line 396, ../../app/styles/backup.scss */
+
+.lok-nav-trigger {
+  display: none;
+}
+
+/* line 399, ../../app/styles/backup.scss */
+
+.desktop .lok-nav-trigger {
+  display: block;
+}
+
+/* line 403, ../../app/styles/backup.scss */
+
+.no-csstransforms3d .lok-nav-trigger:hover {
+  left: 0px;
+}
+
+@-webkit-keyframes trigger-flash {
+  0%, 50%, 100% {
+    opacity: 0.85;
+  }
+
+  25%, 75% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes trigger-flash {
+  0%, 50%, 100% {
+    opacity: 0.85;
+  }
+
+  25%, 75% {
+    opacity: 0.2;
+  }
+}
+
+/* ============================================
+Menu Button
+   ============================================ */
+
+/* line 431, ../../app/styles/backup.scss */
+
+.lok-menu-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  width: 100px;
+  height: auto;
+  border: 0;
+  font-size: x-large;
+  text-align: center;
+  line-height: 59px;
+  border-radius: 0px 0px 0px 10px;
+  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FFCC00;
+  margin: 0px 0px;
+  cursor: pointer;
+  opacity: 1;
+  will-change: opacity, top;
+  transition: opacity 1s 0.75s;
+}
+
+/* line 465, ../../app/styles/backup.scss */
+
+.lok-open-menu.lok-menu-btn {
+  transition: opacity 0.3s, top 0.1s 0.3s;
+  opacity: 0;
+  top: -100%;
+}
+
+/* ============================================
+Menu Structure
+   ============================================ */
+
+/* line 479, ../../app/styles/backup.scss */
+
+.lok-nav {
+  position: absolute;
+  top: 0px;
+  left: -240px;
+  width: 240px;
+  height: 100%;
+  z-index: 400;
+}
+
+/* line 489, ../../app/styles/backup.scss */
+
+.no-csstransforms3d .lok-nav {
+  left: -240px;
+}
+
+/* line 492, ../../app/styles/backup.scss */
+
+.no-csstransforms3d .lok-open-menu .lok-nav {
+  left: 0px;
+}
+
+@media only screen and (orientation: landscape) {
+  /* line 498, ../../app/styles/backup.scss */
+
+  .mobile .lok-nav {
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ============================================
+Timing - Close Nav
+   ============================================ */
+
+/* line 510, ../../app/styles/backup.scss */
+
+.lok-nav {
+  will-change: opacity, transform;
+  transition: opacity 0.5s, transform 0s 0.5s;
+}
+
+/* ============================================
+Timing - Open Nav
+   ============================================ */
+
+/* line 521, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav {
+  transition: opacity 0.5s 0.75s;
+}
+
+/* line 530, ../../app/styles/backup.scss */
+
+.lok-nav {
+  opacity: 0;
+}
+
+/* line 533, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: alpha(opacity=85);
+  -moz-opacity: 0.85;
+  -khtml-opacity: 0.85;
+  opacity: 0.85;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+/* ============================================
+	MenuStyle
+   ============================================ */
+
+/* line 551, ../../app/styles/backup.scss */
+
+.lok-nav {
+  cursor: default;
+  background-color: rgba(255, 204, 0, 0.93) !important;
+  background-color: #FFCC00;
+}
+
+/* line 557, ../../app/styles/backup.scss */
+
+.lok-nav ul {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 564, ../../app/styles/backup.scss */
+
+.lok-nav h2 {
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 1em;
+  color: black;
+  font-weight: 200;
+  font-size: x-large;
+  text-align: right;
+  /* outline: red solid 1px; */
+}
+
+/* line 575, ../../app/styles/backup.scss */
+
+.lok-nav ul li a,
+.lok-nav ul li button {
+  display: block;
+  padding: 1em 1em 1em 1.2em;
+  outline: none;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: right;
+  text-decoration: none;
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 589, ../../app/styles/backup.scss */
+
+.lok-nav ul li button {
+  background: #FFCC00;
+  width: 100%;
+  border: 0px;
+}
+
+/* line 595, ../../app/styles/backup.scss */
+
+.lok-nav ul li:first-child * {
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 599, ../../app/styles/backup.scss */
+
+html:not(.touch) .lok-nav ul li a:hover,
+.lok-nav ul li a.active {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px transparent;
+  color: #fff;
+}
+
+/* ============================================
+	stagerring effect
+ ============================================ */
+
+/* line 610, ../../app/styles/backup.scss */
+
+.lok-nav h2,
+.lok-nav ul li {
+  will-change: transform, opacity;
+  -webkit-transform: translateX(-50px);
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+/* line 622, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav h2,
+.lok-open-menu .lok-nav ul li {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+}
+
+/* line 633, ../../app/styles/backup.scss */
+
+.lok-nav h2,
+.lok-nav ul li {
+  transition: transform 0s, opacity 0s;
+}
+
+/* line 641, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav h2,
+.lok-open-menu .lok-nav ul li {
+  transition: transform 0.5s, opacity  1s;
+}
+
+/* line 649, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav h2 {
+  transition-delay: 1.25s;
+}
+
+/* line 658, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav ul li:nth-child(1) {
+  transition-delay: 1.35s;
+}
+
+/* line 666, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav ul li:nth-child(2) {
+  transition-delay: 1.45s;
+}
+
+/* line 674, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav ul li:nth-child(3) {
+  transition-delay: 1.55s;
+}
+
+/* line 682, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav ul li:nth-child(4) {
+  transition-delay: 1.65s;
+}
+
+/* line 691, ../../app/styles/backup.scss */
+
+.lok-open-menu .lok-nav ul li:nth-child(5) {
+  transition-delay: 1.3s;
+}
+
+/* ============================================
+	ScrollBar
+   ============================================ */
+
+/* ============================================
+ProgressBar
+   ============================================ */
+
+/* line 734, ../../app/styles/backup.scss */
+
+.progress-bar-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  width: 100%;
+  height: 57px;
+  background: transparent;
+  display: none;
+}
+
+/* line 746, ../../app/styles/backup.scss */
+
+.progress-bar-target.nprogress-busy {
+  display: block;
+}
+
+/* line 750, ../../app/styles/backup.scss */
+
+.no-csstransforms3d .lok-container.lok-open-menu,
+.no-js .lok-container.lok-open-menu {
+  padding-left: 300px;
+}
+
+/* line 756, ../../app/styles/backup.scss */
+
+html.lt-ie9 {
+  overflow-y: scroll;
+}
+
+/* line 760, ../../app/styles/backup.scss */
+
+.no-csstransforms3d .lok-lock-scroll.lok-container::after,
+.no-js .lok-lock-scroll.lok-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5s;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 778, ../../app/styles/backup.scss */
+
+.lt-ie9 .container,
+.lt-ie8 .container,
+.lt-ie7 .container {
+  width: 960px;
+}
+
+/*
+
+
+*/

@@ -1,0 +1,13 @@
+{
+  "name": "ngEffeckt.scss",
+  "homepage": "https://github.com/wonglok/ngEffeckt.scss",
+  "_release": "dc159fc4f2",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "dc159fc4f2e19804848dd7a4831ef74c527bd48c"
+  },
+  "_source": "git://github.com/wonglok/ngEffeckt.scss.git",
+  "_target": "*",
+  "_originalSource": "ngEffeckt.scss"
+}

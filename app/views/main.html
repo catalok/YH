@@ -1,0 +1,442 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 hero-paper">
+
+			<div class="hero-paper-welcome-msg"><span class="hidden-xs">黃</span>樂</div>
+		</div><!--col-md-12-->
+	</div><!--row-->
+</div>
+<div class="container">
+
+	<div class="row">
+		<div class="col-md-12 intro-paper">
+			<h1>
+				Hi! I'm Wong Lok. :)
+			</h1>
+			<h4>
+				I love making the UX useful, performant, and awesome!
+			</h4>
+			<p>
+				<a ng-href="#!/settings">
+					Let's try out some 3D website effects!
+				</a>
+			</p>
+
+		</div><!--col-md-12-->
+
+	</div><!--row-->
+	<hr>
+
+
+	<div class="row">
+
+		<div class="col-md-12 intro-paper">
+
+			<h1>
+				WebGL GPU Particle Simulation
+			</h1>
+
+			<p>
+				<ol>
+					<li>Parcile Cloud Scene</li>
+					<ul>
+						<li>Cyber Squares</li>
+						<li>Edge Pulse</li>
+						<li>Wave</li>
+						<li>Storm</li>
+						<li>WormHole</li>
+					</ul>
+				</ol>
+			</p>
+
+			<p>
+				<h4>
+
+				</h4>
+				<ol>
+					<li>W,A for zoomming (dolly)</li>
+					<li>Arrow Keys for Rotation</li>
+				</ol>
+			</p>
+
+			<p>
+
+
+					<h4>
+						<a href="https://vimeo.com/101902573" target="_blank">
+							Watch the video
+						</a>
+						Or
+						<a href="http://wonglok.github.io/WebGLWidget" target="_blank">
+							Go to the App
+						</a>
+					</h4>
+
+					<h4>
+
+					</h4>
+
+					<a href="http://wonglok.github.io/WebGLWidget" target="_blank">
+						<img class="preview" src="images/demo/sandust.png">
+					</a>
+
+			</p>
+
+
+		</div><!--col-md-12-->
+
+
+	</div><!--row-->
+	<hr>
+
+
+
+
+
+	<div class="row">
+
+		<div class="col-md-12 intro-paper">
+
+			<h1>
+				WebGL Memory Optimization
+			</h1>
+
+
+			<p>
+				<h4>
+					Optimizations:
+				</h4>
+				<ol>
+					<li>Obj reuse through memory pool for Model-View Matrix</li>
+
+					<li>Remove Redundant GL State Machine Calls</li>
+
+					<li>Remove Redundant Computation of Matrixcies</li>
+				</ol>
+			</p>
+
+			<p>
+				<h4>
+					Result:
+				</h4>
+				<ol>
+					<li>Reduced GL calls from 553 to 150 for each frame</li>
+
+					<li>Reduce heap allocation from 5KB to 10B</li>
+
+					<li>Less GC pause period. from 5.2ms to 0.19ms</li>
+				</ol>
+			</p>
+
+			<p>
+				<h4>
+					Learned:
+				</h4>
+				<ol>
+					<li>Even a simple/vanilla pool can be quite effective.</li>
+					<li>Less GC, More budget to do crazier effects.</li>
+				</ol>
+			</p>
+
+
+			<img class="preview" src="images/mem/redundantCalls.png">
+
+
+		</div><!--col-md-12-->
+
+
+	</div><!--row-->
+	<hr>
+
+	<div class="row">
+		<div class="col-md-12 intro-paper">
+
+			<h1>
+				ARTPOP WebGL Experiment.
+			</h1>
+
+			<h4>
+				Remix 3D ART, Renders to GIF file.
+			</h4>
+
+			<p>
+				<ol>
+					<li>Works on Desktop and Galaxy S4 Chrome.</li>
+					<li>Remix different Custom GLSL Shaders</li>
+					<li>Remix different Three.JS Meshes</li>
+					<li>Made with AngularJS, and Yeoman</li>
+				</ol>
+			</p>
+
+			<p>
+				Here's the <a ng-href="http://wonglok.github.io/ARTPOP">Experiment</a>. Requires WebGL. i.e.) Desktop / Galaxy S4 Chrome.
+			</p>
+			<p>
+				<a ng-href="http://github.wonglok.com/ARTPOP">
+					<img class="preview" alt="" src="images/demo/apwgl.png" target="_blank">
+				</a>
+			</p>
+
+		</div><!--col-md-12-->
+	</div><!--row-->
+	<hr>
+
+
+
+
+
+	<div class="row">
+
+		<div class="col-md-12 intro-paper">
+
+			<h1>
+				The making of this website.
+			</h1>
+
+			<h4>
+				Here's a list of effeckt, UX tweaks and perf tuning that I built for my github site.
+			</h4>
+
+			<p>
+				<ol>
+					<li>Smooth, High Performance 60FPS 3D Page Effect on iPad2 iOS7</li>
+					<li>Scroll Restore after histroy back on Desktop</li>
+					<li>-webkit-overflow-scrolling:touch mobile page jank fix.</li>
+					<li>3D Menu Change Page Effect</li>
+					<li>2D Page Transition for iOS7 Swipe UX</li>
+				</ol>
+			</p>
+
+			<p>
+				You can use an iPad and try out different effects at <a ng-href="#!/settings">Settings Page</a>! :)
+			</p>
+			<p>
+				<a ng-href="#!/settings">
+					<img class="preview" alt="" src="images/demo/settings2.png" target="_blank">
+				</a>
+			</p>
+
+
+
+		</div><!--col-md-12-->
+
+
+	</div><!--row-->
+	<hr>
+
+	<div class="row">
+
+		<div class="col-md-12 intro-paper">
+
+			<h1>
+				Layers Panel
+			</h1>
+			<h4>
+				Optimizing the GPU memory for mobile
+			</h4>
+			<p>
+				<ul>
+					<li>
+						Mobile has only little Graphics Ram.
+					</li>
+
+					<li>
+						Overflow:hidden can trim composite layer to a very small layer.
+					</li>
+
+					<li>
+						Significantly Reduce GPU memory footprint. :)
+					</li>
+
+				</ul>
+			</p>
+			<p>
+				<img class="preview" alt="" src="images/demo/devtools.png" target="_blank">
+			</p>
+		</div><!--col-md-12-->
+
+	</div><!--row-->
+	<hr>
+
+
+	<div class="row">
+
+		<div class="col-md-12 intro-paper">
+
+			<h1>
+				Test & Iterate on Mobile
+			</h1>
+			<h4>
+				Bottleneck is not what I think it is. O.o")
+			</h4>
+			<p>
+				<ol>
+					<li>
+						Instrumentation tells the correct bottle neck.
+					</li>
+					<li>
+						Render Hacks might not work when new implementaion comes.
+					</li>
+					<li>
+						<a href="//html5rocks.com">Stay up to date. :)</a>
+					</li>
+				</ol>
+			</p>
+			<p>
+
+			</p>
+		</div><!--col-md-12-->
+
+	</div><!--row-->
+	<hr>
+
+
+
+
+
+<!-- 	<div class="row">
+		<div class="col-md-12 intro-paper">
+			<h1>
+				CSS3D Card Fountain
+			</h1>
+			<p>
+				<h4>
+					Technology:
+				</h4>
+				<ol>
+					<li>Viewport height/width (vh,vw)</li>
+
+					<li>CSS Animation</li>
+
+					<li>CSS 3D</li>
+				</ol>
+			</p>
+
+			<p>
+				<a href="http://wonglok.github.io/CSS3D-Cards" target="_blank">
+					<img class="preview" src="images/demo/cardFountain.png">
+				</a>
+			</p>
+		</div>
+
+	</div>
+	<hr>
+ -->
+
+
+	<div ng-init="showMore = false" ng-if="showMore">
+
+		<div class="row">
+			<div class="col-md-12 intro-paper">
+				<h1>
+					Parallax Core
+				</h1>
+				<p>
+					<h4>
+						Technology:
+					</h4>
+					<ol>
+						<li>Device Orientation - Tilting on iPad</li>
+
+						<li>Sync touchmove with scroll on mobile on older devices.</li>
+
+						<li>CSS3D slides</li>
+					</ol>
+				</p>
+
+				<p>
+					<a href="http://wonglok.github.io/CSS3D-Parallax" target="_blank">
+						<img class="preview" src="images/demo/parallax.png">
+					</a>
+				</p>
+			</div><!--col-md-12-->
+
+		</div><!--row-->
+		<hr>
+
+
+
+		<div class="row">
+			<div class="col-md-12 intro-paper">
+				<h1>
+					Canvas2D multi-touch Plasma ball
+				</h1>
+				<p>
+					<h4>
+						<a href="https://youtu.be/bevZff4h7co" target="_blank">
+							Watch the video
+						</a>
+						Or
+						<a href="http://wonglok.github.io/PlasmaBall" target="_blank">
+							Go to the Demo
+						</a>
+					</h4>
+					<a href="http://wonglok.github.io/PlasmaBall" target="_blank">
+						<img class="preview" src="images/demo/simdin.png">
+					</a>
+				</p>
+			</div><!--col-md-12-->
+
+		</div><!--row-->
+		<hr>
+
+
+		<div class="row">
+			<div class="col-md-12 intro-paper">
+
+				<h1>
+					Fixed Effeckt.css Scrolling Problem
+				</h1>
+				<iframe width="100%" height="480" src="//www.youtube-nocookie.com/embed/GM36uPtIKiY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+				<p>
+					iOS5+ webkit-overflow-scrolling makes overflow-scroll divs scolling smooth.
+				</p>
+			</div>
+
+		</div>
+		<hr>
+
+		<div class="row">
+			<div class="col-md-12 intro-paper">
+
+				<h1>
+					Simulating GC Pause Jank
+				</h1>
+				<iframe width="100%" height="480" src="//www.youtube-nocookie.com/embed/MfrmfIsZpo4?rel=0" frameborder="0" allowfullscreen></iframe>
+
+				<p>
+					GC would cause the UI thread to pause. Frequent, and long GC causes significant drop in user engagement.
+				</p>
+
+			</div>
+
+		</div>
+		<hr>
+
+	</div>
+
+	<div class="row" ng-show="!showMore">
+		<div class="col-md-12 intro-paper">
+
+			<h1>
+				<center>
+					<button class="btn" ng-click="showMore = !showMore">Show More</button>
+				</center>
+			</h1>
+
+
+		</div>
+
+		<hr>
+	</div>
+
+
+
+
+
+</div><!--container-->
+
+
+
+

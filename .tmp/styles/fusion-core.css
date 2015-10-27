@@ -1,0 +1,174 @@
+/* line 3, ../../app/styles/fusion-core.scss */
+
+body {
+  margin: 0px;
+}
+
+/* line 12, ../../app/styles/fusion-core.scss */
+
+.core-container {
+  width: 100%;
+  height: 47vh;
+  overflow: hidden;
+  -webkit-perspective: 300vw;
+  perspective: 300vw;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-flow: center;
+  flex-flow: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(1, 1, 1, 0.1);
+}
+
+/* line 38, ../../app/styles/fusion-core.scss */
+
+.core-space {
+  width: 0px;
+  height: 0px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(-30deg) translate3d(0vw, 15vh, 0px);
+  transform: rotateX(-30deg) translate3d(0vw, 15vh, 0px);
+}
+
+@-webkit-keyframes rotateCore {
+  0% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+
+  100% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes rotateCore {
+  0% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+
+  100% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+/* line 57, ../../app/styles/fusion-core.scss */
+
+.core-partition-group {
+  -webkit-animation: rotateCore 25s linear 0s infinite;
+  animation: rotateCore 25s linear 0s infinite;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 1.5s;
+  -webkit-transform: rotateY(60deg);
+  transform: rotateY(60deg);
+}
+
+/* line 83, ../../app/styles/fusion-core.scss */
+
+.core-partition {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25vw;
+  height: 25vh;
+  border-radius: 10px;
+}
+
+/* line 68, ../../app/styles/fusion-core.scss */
+
+.core-partition[cp="1"] {
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(1, 1, 1, 0.2);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotateY(0deg) translate3d(5vw, 0px, 0px);
+  transform: rotateY(0deg) translate3d(5vw, 0px, 0px);
+  transition: all 1.5s 0s;
+}
+
+/* line 68, ../../app/styles/fusion-core.scss */
+
+.core-partition[cp="2"] {
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(1, 1, 1, 0.2);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotateY(60deg) translate3d(5vw, 0px, 0px);
+  transform: rotateY(60deg) translate3d(5vw, 0px, 0px);
+  transition: all 1.5s 0s;
+}
+
+/* line 68, ../../app/styles/fusion-core.scss */
+
+.core-partition[cp="3"] {
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(1, 1, 1, 0.2);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotateY(120deg) translate3d(5vw, 0px, 0px);
+  transform: rotateY(120deg) translate3d(5vw, 0px, 0px);
+  transition: all 1.5s 0s;
+}
+
+/* line 68, ../../app/styles/fusion-core.scss */
+
+.core-partition[cp="4"] {
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(1, 1, 1, 0.2);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotateY(180deg) translate3d(5vw, 0px, 0px);
+  transform: rotateY(180deg) translate3d(5vw, 0px, 0px);
+  transition: all 1.5s 0s;
+}
+
+/* line 68, ../../app/styles/fusion-core.scss */
+
+.core-partition[cp="5"] {
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(1, 1, 1, 0.2);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotateY(240deg) translate3d(5vw, 0px, 0px);
+  transform: rotateY(240deg) translate3d(5vw, 0px, 0px);
+  transition: all 1.5s 0s;
+}
+
+/* line 68, ../../app/styles/fusion-core.scss */
+
+.core-partition[cp="6"] {
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(1, 1, 1, 0.2);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transform: rotateY(300deg) translate3d(5vw, 0px, 0px);
+  transform: rotateY(300deg) translate3d(5vw, 0px, 0px);
+  transition: all 1.5s 0s;
+}

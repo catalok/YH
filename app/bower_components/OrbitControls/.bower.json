@@ -1,0 +1,12 @@
+{
+  "name": "OrbitControls",
+  "_cacheHeaders": {
+    "Last-Modified": "Thu, 24 Apr 2014 18:35:30 GMT",
+    "Content-Length": "14901",
+    "Content-Type": "application/x-javascript"
+  },
+  "main": "index.js",
+  "_source": "http://threejs.org/examples/js/controls/OrbitControls.js",
+  "_target": "*",
+  "_originalSource": "http://threejs.org/examples/js/controls/OrbitControls.js"
+}

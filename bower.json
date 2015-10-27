@@ -1,0 +1,40 @@
+{
+  "name": "yh",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.2.15",
+    "json3": "~3.2.6",
+    "es5-shim": "~2.1.0",
+    "jquery": "~1.11.0",
+    "bootstrap-sass-official": "~3.1.0",
+    "angular-resource": "1.2.15",
+    "angular-cookies": "1.2.15",
+    "angular-sanitize": "1.2.15",
+    "angular-route": "1.2.15",
+    "modernizr": "~2.7.2",
+    "three.js": "*",
+    "tween.js": "git@github.com:sole/tween.js.git",
+    "normalize-css": "~3.0.1",
+    "stats.js": "git@github.com:mrdoob/stats.js.git",
+    "angular-animate": "~1.2.16",
+    "angular-touch": "~1.2.16",
+    "webgl-debug": "https://raw.github.com/tparisi/WebGLBook/master/Chapter%207/webgl-debug.js",
+    "TrackballControls": "http://threejs.org/examples/js/controls/TrackballControls.js",
+    "nprogress": "~0.1.3",
+    "OrbitControls": "http://threejs.org/examples/js/controls/OrbitControls.js",
+    "classie": "~1.0.1",
+    "polyfills": "*",
+    "angular-hammer": "~1.0.3",
+    "zepto": "~1.1.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.15",
+    "angular-scenario": "1.2.15",
+    "boundarizer.min": "https://raw.githubusercontent.com/paullewis/Boundarizr/master/js/boundarizer.min.js",
+    "ngEffeckt.scss": "*",
+    "console-polyfill": "https://github.com/paulmillr/console-polyfill.git#~0.1.1"
+  },
+  "resolutions": {
+    "angular": "1.2.16"
+  }
+}

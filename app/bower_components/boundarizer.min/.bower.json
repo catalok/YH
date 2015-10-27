@@ -1,0 +1,13 @@
+{
+  "name": "boundarizer.min",
+  "_cacheHeaders": {
+    "ETag": "\"93f35220687134af5616426225bdfe6a178da5f6\"",
+    "Content-Length": "2698",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:93f352206",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/paullewis/Boundarizr/master/js/boundarizer.min.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/paullewis/Boundarizr/master/js/boundarizer.min.js"
+}
